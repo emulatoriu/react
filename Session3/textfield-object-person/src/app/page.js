@@ -4,9 +4,7 @@ import styles from "./page.module.css";
 import { useState } from "react";
 
 export default function Home() {
-  const [firstname, setFirstName] = useState("")
-  const [lastname, setLastName] = useState("")
-  const [message, setMessage] = useState("")
+
   const [form, setForm] = useState({
     firstname: "",
     lastname: "",
