@@ -15,16 +15,16 @@ export default function Home() {
 
   function handleDownClicked() {
     setLightState(previous => ++previous % 3)
-  }
+    }
 
 
   return (
     <div className={styles.page}>
       <main className={styles.main}>
         <div className={trafficStyles.trafficLight}>
-          <div className={trafficStyles.light} style={lightState == 0? { backgroundColor: "red" } : { backgroundColor: "rgba(255, 0, 0, 0.2)" }}></div>
-          <div className={trafficStyles.light} style={lightState == 1? { backgroundColor: "yellow" } : { backgroundColor: "rgba(255, 255, 0, 0.2)" }}></div>
-          <div className={trafficStyles.light} style={lightState == 2? { backgroundColor: "green" } : { backgroundColor: "rgba(0, 255, 0, 0.2)" }}></div>
+          <div className={trafficStyles.light} style={lightState === 0? { backgroundColor: "red" } : { backgroundColor: "rgba(255, 0, 0, 0.2)" }}></div>
+          <div className={trafficStyles.light} style={lightState === 1? { backgroundColor: "yellow" } : { backgroundColor: "rgba(255, 255, 0, 0.2)" }}></div>
+          <div className={trafficStyles.light} style={lightState === 2? { backgroundColor: "green" } : { backgroundColor: "rgba(0, 255, 0, 0.2)" }}></div>
         </div>
         <button onClick={handleUpClicked}><img src="/arrowUp.png" /></button>
         <button onClick={handleDownClicked}><img src="/arrowDown.png" /></button>

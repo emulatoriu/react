@@ -29,8 +29,8 @@ export default function Jokes() {
     }
 
     const jokeElements = jokes.map((joke, index) => {
-        return <p key={index} onDoubleClick={() => {
-            handleDoubleClick(index)
+        return <p key={index} onDoubleClick={async () => {
+            await handleDoubleClick(index)
         }}>{joke.text}</p>
     })
 
